@@ -9,6 +9,8 @@ colorama==0.4.3
 contextlib2==0.6.0
 distlib==0.3.0
 distro==1.4.0
+dnspython==2.1.0
+email-validator==1.1.2
 Flask==1.1.2
 Flask-Migrate==2.7.0
 Flask-SQLAlchemy==2.4.4
