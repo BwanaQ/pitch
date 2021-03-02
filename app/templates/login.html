@@ -7,14 +7,25 @@
       <div class="form-group">
         {{ form.email.label(class="form-control-label") }} {{
         form.email(class="form-control form-control-lg") }}
+        {% for error in form.email.errors %}
+        <span class="danger text-muted">[{{ error }}]</span>
+        {% endfor %}
+
       </div>
       <div class="form-group">
         {{ form.password.label(class="form-control-label") }} {{
-        form.password(class="form-control form-control-lg") }}
+        form.password(class="form-control form-control-lg") }} 
+        {% for error in form.password.errors %}
+        <span class="danger text-muted">[{{ error }}]</span>
+        {% endfor %}
       </div>
       <div class="form-check">
         {{ form.remember_me.label(class="form-check-label") }} {{
         form.remember_me(class="form-check-input") }}
+        {% for error in form.remember_me.errors %}
+        <span class="danger text-muted">[{{ error }}]</span>
+        {% endfor %}
+
       </div>
       <div class="form-group">
         {{ form.submit (class = "btn btn-outline-info") }}
