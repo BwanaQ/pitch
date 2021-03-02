@@ -49,25 +49,35 @@
                 >Home</a
               >
             </li>
+            {% if current_user.is_anonymous %}
             <li class="nav-item">
-              <a class="btn btn-primary" href="/login">Sign in</a>
+              <a class="btn btn-primary" href="{{url_for('login')}}">Sign in</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-outline-primary" href="/registration"
+              <a
+                class="btn btn-outline-primary"
+                href="{{url_for('registration')}}"
                 >Sign up</a
               >
             </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="btn btn-danger" href="{{url_for('logout')}}">Logout</a>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>
     </nav>
     <div class="row">
       {% with messages = get_flashed_messages() %} {% if messages %}
-      <ul>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-      </ul>
+      <div class="alert alert-danger">
+        <ul>
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
       {% endif %} {% endwith %}
     </div>
     <div class="container">{%block content%} {%endblock%}</div>
