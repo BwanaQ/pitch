@@ -12,7 +12,7 @@ def index():
             'author': 'Tom Hunja',
             'title': 'First Pitch',
             'category': 'Inspirational',
-            'description': 'First pitch ever',
+            'body': 'First pitch ever',
             'date_posted': 'Feb 27, 2021',
             'votes': 10
         },
@@ -20,7 +20,7 @@ def index():
             'author': 'Breens Mbaka',
             'title': 'Second Pitch',
             'category': 'Dating',
-            'description': 'First pitch ever',
+            'body': 'First pitch ever',
             'date_posted': 'Feb 1, 2020',
             'votes': 40
         },
@@ -28,7 +28,7 @@ def index():
             'author': 'James Hunja',
             'title': 'greatest joke',
             'category': 'Funny',
-            'description': 'Haha',
+            'body': 'Haha',
             'date_posted': 'Feb 27, 2021',
             'votes': 0
         }
