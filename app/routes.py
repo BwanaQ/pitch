@@ -42,7 +42,7 @@ def login():
     return render_template('login.html', title='Sign In', form=form)
 
 
-@app.route('/registraton')
+@app.route('/registration')
 def registration():
     form = RegistrationForm()
-    return render_template('register.html', title='Sign Up', form=form)
+    return render_template('registration.html', title='Sign Up', form=form)
